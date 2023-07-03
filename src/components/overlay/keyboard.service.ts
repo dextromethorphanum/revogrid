@@ -144,6 +144,7 @@ export class KeyboardService {
     switch (e.code) {
       case codesLetter.ARROW_UP:
         return { changes: { y: -1 }, isMulti };
+      case codesLetter.ENTER:
       case codesLetter.ARROW_DOWN:
         return { changes: { y: 1 }, isMulti };
       case codesLetter.ARROW_LEFT:
