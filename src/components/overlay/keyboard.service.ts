@@ -131,9 +131,11 @@ export class KeyboardService {
 
   /** Monitor key direction changes */
   changeDirectionKey(e: KeyboardEvent, canRange: boolean): { changes: Partial<Selection.Cell>; isMulti?: boolean } | void {
+    console.log('changeDirectionKey', e.code);
     const isMulti: boolean = canRange && e.shiftKey;
     switch (e.code) {
       case codesLetter.TAB:
+      case codesLetter.ENTER:
       case codesLetter.ARROW_UP:
       case codesLetter.ARROW_DOWN:
       case codesLetter.ARROW_LEFT:
